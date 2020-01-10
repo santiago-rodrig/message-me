@@ -1,0 +1,2 @@
+module ChatRoomHelper
+end
