@@ -27,6 +27,10 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+# Better look of user tables in rails console
+# run Hirb.enable first
+gem 'hirb'
+
 # These 2 gems are for implementic semantic-ui
 gem 'semantic-ui-sass'
 gem 'jquery-rails'
