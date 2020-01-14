@@ -1,9 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  body: MyString
-  user_id: one
+  body: Hello there
+  user: bob
 
 two:
-  body: MyString
-  user_id: two
+  body: Dogs are the best
+  user: gloria
