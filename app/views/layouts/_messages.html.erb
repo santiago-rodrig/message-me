@@ -1,12 +1,14 @@
-<div class="ui grid">
-  <% flash.each do |type, msg| %>
-    <div class="column">
-      <div class="ui <%= type %> message">
-        <i class="close icon"></i>
-        <div class="header">
-          <%= msg %>
+<% if flash.any? %>
+  <div class="ui grid">
+    <% flash.each do |type, msg| %>
+      <div class="column">
+        <div class="ui <%= type %> message">
+          <i class="close icon"></i>
+          <div class="header">
+            <%= msg %>
+          </div>
         </div>
       </div>
-    </div>
-  <% end %>
-</div>
+    <% end %>
+  </div>
+<% end %>

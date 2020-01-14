@@ -1,7 +1,6 @@
 <div class="ui small inverted menu">
   <div class="ui container">
-    <%= link_to 'Chatroom', root_path, class: 'item'%>
-    <%= link_to 'Messages', '#', class: 'item' %>
+    <%= link_to 'Chatroom', chatroom_path, class: 'item'%>
     <div class="right menu">
       <% if logged_in? %>
         <div class="ui dropdown item">
@@ -11,7 +10,7 @@
           </div>
         </div>
       <% else %>
-        <%= link_to 'Log in', login_path, class: 'item' %>
+        <%= link_to 'Log in', root_path, class: 'item' %>
         <%= link_to 'Sign up', '#', class: 'ui primary disabled button' %>
       <% end %>
     </div>
