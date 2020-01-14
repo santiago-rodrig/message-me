@@ -1,22 +1,25 @@
 <div class="content">
-	<div class="ui feed">
-		<div class="event">
-			<div class="content">
-				<div class="summary">
-					<em>Elliot Fu</em>: Test message
-				</div>
-			</div>
-		</div>
-	</div>
+  <div class="ui feed">
+    <% @messages.each do |message| %>
+      <div class="event">
+        <div class="content">
+          <div class="summary">
+            <em><%= message.user.name %></em>:
+            <%= message.body %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>
 
 <div class="extra content">
-	<form class="ui reply form">
-		<div class="field">
-			<div class="ui left icon input">
-				<input type="text" placeholder="Enter a message...">
-				<i class="edit icon"></i>
-			</div>
-		</div>
-	</form>
+  <form class="ui reply form">
+    <div class="field">
+      <div class="ui left icon input">
+        <input type="text" placeholder="Enter a message...">
+        <i class="edit icon"></i>
+      </div>
+    </div>
+  </form>
 </div>
