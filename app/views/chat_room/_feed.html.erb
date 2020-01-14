@@ -5,12 +5,14 @@
 </div>
 
 <div class="extra content">
-  <form class="ui reply form">
+  <%= form_for(@message, html: { class: 'ui reply form', role: 'form' },
+    url: message_path) do |f| %>
     <div class="field">
-      <div class="ui left icon input">
-        <input type="text" placeholder="Enter a message...">
-        <i class="edit icon"></i>
+      <div class="ui right icon input">
+        <%= f.text_field :body, placeholder: 'Enter a message...' %>
+        <%# <%= f.button '<i class="bordered inverted orange edit icon"></i>'.html_safe, class: 'send-message' %1> %>
+        <i class="bordered inverted orange edit icon"></i>
       </div>
     </div>
-  </form>
+  <% end %>
 </div>
