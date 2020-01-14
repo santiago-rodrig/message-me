@@ -25,8 +25,6 @@ scrollBottom = function() {
 
 submitMessage = function() {
   $('#message_body').on('keydown', function(e) {
-    e.preventDefault();
-
     if (e.keyCode == 13) {
       $('button').click();
       e.target.value = '';
