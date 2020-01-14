@@ -1,12 +1,12 @@
 <div class="content">
-  <div class="ui feed">
+  <div class="ui feed" id="messages-box">
     <%= render @messages %>
   </div>
 </div>
 
 <div class="extra content">
   <%= form_for(@message, html: { class: 'ui reply form', role: 'form' },
-    url: message_path) do |f| %>
+    url: message_path, remote: true) do |f| %>
     <div class="field">
       <div class="ui right icon input">
         <%= f.text_field :body, placeholder: 'Enter a message...' %>
