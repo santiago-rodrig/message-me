@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.delete_all
+Message.delete_all
 
 User.create([
   {
@@ -24,3 +25,11 @@ User.create([
     password_confirmation: 'password'
   }
 ])
+
+bob = User.find_by(name: 'bob')
+ann = User.find_by(name: 'ann')
+jenny = User.find_by(name: 'jenny')
+
+bob.messages.create(body: 'Hello everyone!')
+ann.messages.create(body: 'Hello bob, how are u?')
+jenny.messages.create(body: 'Hey bob! nice to have you here with us :)')
