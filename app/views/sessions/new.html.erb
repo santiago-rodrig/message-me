@@ -1,37 +1,37 @@
 <h2 class="ui center aligned medium icon header">
-	<i class="power off circular orange icon"></i>
-	Log in to continue
+  <i class="power off circular orange icon"></i>
+  Log in to continue
 </h2>
 
 <div class="ui placeholder segment">
-	<div class="ui two column very relaxed stackable grid">
-		<div class="column">
-			<div class="ui form">
-				<div class="field">
-					<label>Username</label>
-					<div class="ui left icon input">
-						<input type="text" placeholder="Username">
-						<i class="user icon"></i>
-					</div>
-				</div>
-				<div class="field">
-					<label>Password</label>
-					<div class="ui left icon input">
-						<input type="password">
-						<i class="lock icon"></i>
-					</div>
-				</div>
-				<div class="ui orange submit button">Login</div>
-			</div>
-		</div>
-		<div class="middle aligned column">
-			<div class="ui big orange button">
-				<i class="signup icon"></i>
-				Sign Up
-			</div>
-		</div>
-	</div>
-	<div class="ui vertical divider">
-		Or
-	</div>
+  <div class="ui two column very relaxed stackable grid">
+    <div class="column">
+      <%= form_for(:session, html: { class: 'ui form', role: 'form' }) do |f| %>
+        <div class="field">
+          <%= f.label :name %>
+          <div class="ui left icon input">
+            <%= f.text_field :name, placeholder: 'username' %>
+            <i class="user icon"></i>
+          </div>
+        </div>
+        <div class="field">
+          <%= f.label :password %>
+          <div class="ui left icon input">
+            <%= f.password_field :password %>
+            <i class="lock icon"></i>
+          </div>
+        </div>
+        <%= f.submit 'Login', class: 'ui orange submit button' %>
+      <% end %>
+    </div>
+    <div class="middle aligned column">
+      <div class="ui big disabled orange button">
+        <i class="signup icon"></i>
+        Sign Up
+      </div>
+    </div>
+  </div>
+  <div class="ui vertical divider">
+    Or
+  </div>
 </div>
