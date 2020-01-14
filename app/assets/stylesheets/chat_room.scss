@@ -7,19 +7,10 @@
 }
 
 .send-message {
-  padding: 0;
-  border: none;
-  background: transparent;
-
-  i {
-    bottom: 0;
-    top: 0;
-    // padding: 0 !important;
-    margin: 0 !important;
-  }
+  display: none;
 }
 
 #messages-wrapper {
-  height: 15em;
+  // height: 15em;
   overflow: auto;
 }
