@@ -26,8 +26,7 @@ scrollBottom = function() {
 submitMessage = function() {
   $('#message_body').on('keydown', function(e) {
     if (e.keyCode == 13) {
-      $('button').click();
-      e.target.value = '';
+      $('#message_body').closest('button').click();
     }
   });
 };
