@@ -91,4 +91,7 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # for actioncable in heroku
+  config.action_cable.allowed_request_origins = ['https://still-eyrie-82013.herokuapp.com/']
 end
