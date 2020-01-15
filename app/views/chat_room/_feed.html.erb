@@ -1,16 +1,16 @@
-<div class="content">
-  <div class="ui feed">
+<div class="content" id="messages-wrapper">
+  <div class="ui feed" id="messages-box">
     <%= render @messages %>
   </div>
 </div>
 
 <div class="extra content">
   <%= form_for(@message, html: { class: 'ui reply form', role: 'form' },
-    url: message_path) do |f| %>
+    url: message_path, remote: true) do |f| %>
     <div class="field">
       <div class="ui right icon input">
         <%= f.text_field :body, placeholder: 'Enter a message...' %>
-        <%# <%= f.button '<i class="bordered inverted orange edit icon"></i>'.html_safe, class: 'send-message' %1> %>
+        <%= f.button '', class: 'send-message' %>
         <i class="bordered inverted orange edit icon"></i>
       </div>
     </div>

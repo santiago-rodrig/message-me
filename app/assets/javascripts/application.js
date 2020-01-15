@@ -17,10 +17,27 @@
 //= require semantic-ui
 //= require_tree .
 
+scrollBottom = function() {
+  if ($('#messages-wrapper').length > 0) {
+    $('#messages-wrapper').scrollTop($('#messages-wrapper')[0].scrollHeight);
+  }
+};
+
+submitMessage = function() {
+  $('#message_body').on('keydown', function(e) {
+    if (e.keyCode == 13) {
+      $('#message_body').closest('button').click();
+    }
+  });
+};
+
 $(document).on('turbolinks:load', function() {
   $('.ui.dropdown').dropdown();
 
   $('.message .close') .on('click', function() {
     $(this).closest('.message').transition('fade');
   });
+
+  submitMessage();
+  scrollBottom();
 });
